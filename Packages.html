@@ -1,0 +1,567 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Packages | SkyNest Co – Living Spaces</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Packages introduction */
+        .packages-intro {
+            padding: 32px 0;
+            background: #edf1f4;
+        }
+
+        .packages-intro-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid #e0e6ea;
+            border-radius: 8px;
+        }
+
+        .packages-intro-copy {
+            padding: 12px;
+        }
+
+            .packages-intro-copy .eyebrow {
+                margin-bottom: 12px;
+            }
+
+            .packages-intro-copy h1 {
+                margin: 0 0 16px;
+                line-height: 1.2;
+            }
+
+            .packages-intro-copy p {
+                line-height: 1.8;
+                margin-bottom: 22px;
+            }
+
+        .packages-intro-image {
+            min-height: 230px;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #e6edf1;
+        }
+
+            .packages-intro-image img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 230px;
+                object-fit: cover;
+            }
+
+        /* Package listing */
+        .packages-listing {
+            padding: 40px 0;
+        }
+
+        .packages-heading {
+            margin-bottom: 26px;
+        }
+
+            .packages-heading h2 {
+                margin-bottom: 10px;
+            }
+
+            .packages-heading p {
+                max-width: 650px;
+                line-height: 1.7;
+            }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .package-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 14px;
+            background: #ffffff;
+            border: 1px solid #d9e1e6;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .package-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 22px rgba(32, 50, 64, 0.1);
+            }
+
+        .package-image {
+            height: 145px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            border-radius: 5px;
+            background: #e8eef2;
+        }
+
+            .package-image img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .package-card h3 {
+            margin: 0 0 12px;
+            padding: 10px 8px;
+            border: 1px solid #536775;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .package-card p {
+            margin: 0 0 16px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #596875;
+        }
+
+        .package-card .btn {
+            align-self: center;
+            margin-top: auto;
+            text-align: center;
+        }
+
+        /* Bottom call to action */
+        .packages-cta {
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            background: #293c4b;
+            border-radius: 8px;
+        }
+
+            .packages-cta h2 {
+                margin: 0 0 12px;
+            }
+
+            .packages-cta p {
+                max-width: 600px;
+                margin: 0 auto 22px;
+                color: #dce5ea;
+                line-height: 1.7;
+            }
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .package-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 650px) {
+            .packages-intro {
+                padding: 22px 0;
+            }
+
+            .packages-intro-inner {
+                grid-template-columns: 1fr;
+                padding: 18px;
+                gap: 18px;
+            }
+
+            .packages-intro-copy {
+                padding: 4px;
+            }
+
+            .packages-intro-image,
+            .packages-intro-image img {
+                min-height: 190px;
+            }
+
+            .packages-listing {
+                padding: 30px 0;
+            }
+
+            .package-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .package-image {
+                height: 165px;
+            }
+
+            .packages-cta {
+                padding: 30px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header class="header">
+        <div class="container nav">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">S</span>
+                <span>SKYNEST<small>Co – Living Spaces</small></span>
+            </a>
+
+            <button class="menu"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="packages.html">Packages</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a class="btn btn-dark" href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Intro section: text on the left, image on the right -->
+        <section class="packages-intro">
+            <div class="container">
+
+                <div class="packages-intro-inner">
+
+                    <div class="packages-intro-copy">
+
+                        <div class="eyebrow">Our Packages</div>
+
+                        <h1>Find Your Perfect Space.</h1>
+
+                        <p>
+                            Discover flexible co-living options designed
+                            around your lifestyle. Whether you need a short
+                            stay, a longer home or a space to study and work,
+                            SkyNest has an option to explore.
+                        </p>
+
+                        <a class="btn btn-primary" href="#available-packages">
+                            Explore Packages →
+                        </a>
+
+                    </div>
+
+                    <div class="packages-intro-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80"
+                             alt="Modern furnished room at SkyNest Co – Living Spaces">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Available packages -->
+        <section class="packages-listing section-alt"
+                 id="available-packages">
+
+            <div class="container">
+
+                <div class="packages-heading">
+                    <div class="eyebrow">Choose Your Stay</div>
+
+                    <h2>Explore Our Living Options</h2>
+
+                    <p>
+                        Browse our different options and find the type of
+                        accommodation that works best for you.
+                    </p>
+                </div>
+
+                <div class="package-grid">
+
+                    <!-- Package 1 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&q=80"
+                                 alt="Cozy bedroom for Short Stay">
+                        </div>
+
+                        <h3>Short Stay</h3>
+
+                        <p>
+                            A flexible option for temporary accommodation
+                            and shorter visits.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=short-stay">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 2 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
+                                 alt="Comfortable apartment living area for Long Stay">
+                        </div>
+
+                        <h3>Long Stay</h3>
+
+                        <p>
+                            A comfortable living option for those looking
+                            for a longer-term home.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=long-stay">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 3 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80"
+                                 alt="Student bedroom with study desk">
+                        </div>
+
+                        <h3>Student Living</h3>
+
+                        <p>
+                            A convenient home base for students balancing
+                            studies, rest and everyday life.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=student-living">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 4 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=600&q=80"
+                                 alt="Workspace and living setup for Professional Stay">
+                        </div>
+
+                        <h3>Professional Stay</h3>
+
+                        <p>
+                            A welcoming space for working professionals
+                            and people starting a new chapter.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=professional-stay">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 5 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
+                                 alt="Shared apartment lounge for Shared Room residents">
+                        </div>
+
+                        <h3>Shared Room</h3>
+
+                        <p>
+                            A shared accommodation option for residents
+                            who enjoy living in a community.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=shared-room">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 6 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80"
+                                 alt="Furnished Private Room">
+                        </div>
+
+                        <h3>Private Room</h3>
+
+                        <p>
+                            Your own private room with access to
+                            shared co-living facilities.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=private-room">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 7 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80"
+                                 alt="Modern studio suite for Premium Living">
+                        </div>
+
+                        <h3>Premium Living</h3>
+
+                        <p>
+                            Explore a more personalised accommodation
+                            option for your preferred lifestyle.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=premium-living">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                    <!-- Package 8 -->
+                    <article class="package-card">
+
+                        <div class="package-image">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                                 alt="Executive workspace and accommodation for Corporate Stay">
+                        </div>
+
+                        <h3>Corporate Stay</h3>
+
+                        <p>
+                            Accommodation options to explore for business
+                            travellers and corporate clients.
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="contact.html?package=corporate-stay">
+                            Enquire Now
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final call to action -->
+        <section class="section">
+            <div class="container">
+
+                <div class="packages-cta">
+
+                    <h2>Not Sure Which Package to Choose?</h2>
+
+                    <p>
+                        Tell us what you need and get in touch with our
+                        team to discuss the right living arrangement for you.
+                    </p>
+
+                    <a class="btn btn-primary" href="contact.html">
+                        Contact Our Team →
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">S</span>
+                        <span>SKYNEST<small>Co – Living Spaces</small></span>
+                    </a>
+
+                    <p>
+                        Modern co-living for people building
+                        their next chapter.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="index.html">Home</a><br>
+                        <a href="packages.html">Packages</a><br>
+                        <a href="facilities.html">Facilities</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Support</h3>
+
+                    <p>
+                        <a href="faq.html">FAQ</a><br>
+                        <a href="contact.html">Contact</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>
+                        hello@skynestcoliving.sg<br>
+                        +65 6123 4567
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span data-year></span> SkyNest Co – Living Spaces.
+                </span>
+
+                <span>
+                    Accessible • Responsive • Mobile-friendly
+                </span>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

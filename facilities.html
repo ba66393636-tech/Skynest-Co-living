@@ -1,0 +1,585 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facilities | SkyNest Co – Living Spaces</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Facilities introduction banner */
+        .facilities-hero {
+            background: #7d8d9b;
+            padding: 28px 0;
+        }
+
+        .facilities-hero-inner {
+            display: grid;
+            grid-template-columns: 58% 42%;
+            align-items: center;
+            min-height: 125px;
+        }
+
+        .facilities-hero-copy {
+            padding: 18px 24px;
+            border: 2px solid #dce4e9;
+            color: #ffffff;
+        }
+
+            .facilities-hero-copy .eyebrow {
+                color: #edf3f6;
+                margin-bottom: 10px;
+            }
+
+            .facilities-hero-copy h1 {
+                margin: 0 0 12px;
+                line-height: 1.2;
+            }
+
+            .facilities-hero-copy p {
+                margin: 0;
+                line-height: 1.8;
+                color: #f0f4f6;
+            }
+
+        .facilities-hero-space {
+            min-height: 125px;
+        }
+
+        /* Main facilities section */
+        .facilities-section {
+            padding: 38px 0 48px;
+            background: #293945;
+            color: #ffffff;
+        }
+
+        .facilities-heading {
+            margin-bottom: 30px;
+        }
+
+            .facilities-heading .eyebrow {
+                color: #c5d5df;
+            }
+
+            .facilities-heading h2 {
+                margin: 8px 0 12px;
+                color: #ffffff;
+            }
+
+            .facilities-heading p {
+                max-width: 650px;
+                margin: 0;
+                line-height: 1.8;
+                color: #dce5ea;
+            }
+
+        /* Three-column facility grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            column-gap: 32px;
+            row-gap: 28px;
+        }
+
+        .facility-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-width: 0;
+            padding: 0;
+            background: #293945;
+            border: 1px solid #526675;
+            border-radius: 3px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+            .facility-card:hover {
+                transform: translateY(-3px);
+                border-color: #a9bfce;
+            }
+
+        .facility-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            background: #566979;
+            color: #eef4f7;
+            font-size: 42px;
+        }
+
+        .facility-content {
+            padding: 10px 8px;
+        }
+
+            .facility-content h3 {
+                margin: 0;
+                padding: 8px 6px;
+                border: 1px solid #637987;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .facility-content p {
+                margin: 12px 2px 2px;
+                color: #d3dfe6;
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+        /* Footer call to action */
+        .facilities-cta {
+            margin-top: 42px;
+            padding: 28px 20px;
+            border: 1px solid #667c8b;
+            background: #394e5d;
+            text-align: center;
+        }
+
+            .facilities-cta h2 {
+                margin: 0 0 12px;
+                color: #ffffff;
+            }
+
+            .facilities-cta p {
+                max-width: 650px;
+                margin: 0 auto 20px;
+                line-height: 1.7;
+                color: #dce5ea;
+            }
+
+        /* Tablet layout */
+        @media (max-width: 850px) {
+            .facilities-grid {
+                column-gap: 20px;
+                row-gap: 22px;
+            }
+
+            .facility-visual {
+                min-height: 105px;
+            }
+
+            .facilities-hero-inner {
+                grid-template-columns: 70% 30%;
+            }
+        }
+
+        /* Mobile layout */
+        @media (max-width: 600px) {
+            .facilities-hero {
+                padding: 20px 0;
+            }
+
+            .facilities-hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .facilities-hero-copy {
+                padding: 18px;
+            }
+
+            .facilities-hero-space {
+                display: none;
+            }
+
+            .facilities-section {
+                padding: 30px 0;
+            }
+
+            .facilities-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px;
+            }
+
+            .facility-visual {
+                min-height: 100px;
+                font-size: 34px;
+            }
+
+            .facility-content {
+                padding: 8px;
+            }
+
+                .facility-content h3 {
+                    font-size: 13px;
+                }
+
+                .facility-content p {
+                    font-size: 13px;
+                }
+
+            .facilities-cta {
+                margin-top: 28px;
+                padding: 24px 16px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facility-visual {
+                min-height: 125px;
+            }
+
+            .facility-content h3 {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header class="header">
+        <div class="container nav">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">S</span>
+                <span>SKYNEST<small>Co – Living Spaces</small></span>
+            </a>
+
+            <button class="menu"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="packages.html">Packages</a>
+                <a class="active" href="facilities.html">Facilities</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a class="btn btn-dark" href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Facilities introduction -->
+        <section class="facilities-hero">
+            <div class="container facilities-hero-inner">
+
+                <div class="facilities-hero-copy">
+
+                    <div class="eyebrow">Life at SkyNest</div>
+
+                    <h1>Facilities for Everyday Living.</h1>
+
+                    <p>
+                        Discover the shared spaces, useful amenities and
+                        everyday conveniences that make co-living a
+                        comfortable and connected experience.
+                    </p>
+
+                </div>
+
+                <div class="facilities-hero-space"
+                     aria-hidden="true">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Facilities cards -->
+        <section class="facilities-section">
+            <div class="container">
+
+                <div class="facilities-heading">
+
+                    <div class="eyebrow">Explore Our Facilities</div>
+
+                    <h2>Everything You Need to Feel at Home.</h2>
+
+                    <p>
+                        From spaces to work and prepare meals to places
+                        where you can relax and connect, explore the
+                        facilities designed for everyday life.
+                    </p>
+
+                </div>
+
+                <div class="facilities-grid">
+
+                    <!-- Facility 1 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Wi-Fi">
+                            📶
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>High-Speed Wi-Fi</h3>
+
+                            <p>
+                                Stay connected for work, study and
+                                everyday activities.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 2 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Workspace">
+                            💻
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Co-Working Space</h3>
+
+                            <p>
+                                Find a dedicated place to focus,
+                                study or get work done.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 3 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Kitchen">
+                            🍳
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Shared Kitchen</h3>
+
+                            <p>
+                                Prepare meals and make everyday cooking
+                                part of your routine.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 4 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Lounge">
+                            🛋️
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Resident Lounge</h3>
+
+                            <p>
+                                Unwind in a communal space and spend
+                                time with fellow residents.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 5 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Laundry">
+                            🧺
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Laundry Facilities</h3>
+
+                            <p>
+                                Keep daily routines convenient with
+                                laundry facilities.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 6 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Fitness">
+                            🏃
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Fitness and Wellness</h3>
+
+                            <p>
+                                Make time for movement, relaxation
+                                and your overall wellbeing.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 7 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Cleaning">
+                            🧹
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Cleaning Services</h3>
+
+                            <p>
+                                Explore available services that help
+                                keep shared spaces comfortable.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 8 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Secure access">
+                            🔐
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Secure Access</h3>
+
+                            <p>
+                                A living environment designed with
+                                residents' privacy and security in mind.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Facility 9 -->
+                    <article class="facility-card">
+
+                        <div class="facility-visual"
+                             role="img"
+                             aria-label="Community">
+                            🤝
+                        </div>
+
+                        <div class="facility-content">
+                            <h3>Community Activities</h3>
+
+                            <p>
+                                Discover opportunities to socialise,
+                                meet people and build connections.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Contact call to action -->
+                <div class="facilities-cta">
+
+                    <h2>Have Questions About Our Facilities?</h2>
+
+                    <p>
+                        Contact our team to find out which amenities
+                        and services are available with your stay.
+                    </p>
+
+                    <a class="btn btn-primary" href="contact.html">
+                        Contact Us →
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">S</span>
+                        <span>SKYNEST<small>Co – Living Spaces</small></span>
+                    </a>
+
+                    <p>
+                        Modern co-living for people building
+                        their next chapter.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="index.html">Home</a><br>
+                        <a href="packages.html">Packages</a><br>
+                        <a href="facilities.html">Facilities</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Support</h3>
+
+                    <p>
+                        <a href="faq.html">FAQ</a><br>
+                        <a href="contact.html">Contact</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>
+                        hello@skynestcoliving.sg<br>
+                        +65 6123 4567
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span data-year></span> SkyNest Co – Living Spaces.
+                </span>
+
+                <span>
+                    Accessible • Responsive • Mobile-friendly
+                </span>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
