@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Get in touch with SkyNest Co – Living Spaces for questions about rooms, packages, facilities and availability.">
     <title>Contact | SkyNest Co – Living Spaces</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         /* Accessible labels remain available to screen readers. */
@@ -402,29 +402,29 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
     <script>
-                // No server is configured, so prepare an email instead of claiming to submit the form.
-                const contactForm = document.getElementById('contact-form');
+        // No server is configured, so prepare an email instead of claiming to submit the form.
+        const contactForm = document.getElementById('contact-form');
 
-                // The type check also ensures the form exists before using form-specific methods.
-                if (contactForm instanceof HTMLFormElement) {
-                    contactForm.addEventListener('submit', function (event) {
-                        event.preventDefault();
+        // The type check also ensures the form exists before using form-specific methods.
+        if (contactForm instanceof HTMLFormElement) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
 
-                        if (!contactForm.reportValidity()) return;
+                if (!contactForm.reportValidity()) return;
 
-                        const formData = new FormData(contactForm);
-                        const name = String(formData.get('name') || '').trim();
-                        const email = String(formData.get('email') || '').trim();
-                        const subject = String(formData.get('subject') || 'SkyNest Co – Living Spaces enquiry').trim();
-                        const message = String(formData.get('message') || '').trim();
-                        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-                        const mailto = `mailto:hello@skynestcoliving.sg?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const formData = new FormData(contactForm);
+                const name = String(formData.get('name') || '').trim();
+                const email = String(formData.get('email') || '').trim();
+                const subject = String(formData.get('subject') || 'SkyNest Co – Living Spaces enquiry').trim();
+                const message = String(formData.get('message') || '').trim();
+                const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+                const mailto = `mailto:hello@skynestcoliving.sg?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-                        window.location.href = mailto;
-                    });
-                }
+                window.location.href = mailto;
+            });
+        }
     </script>
 </body>
 </html>
